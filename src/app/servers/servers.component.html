@@ -1,5 +1,34 @@
-<p>servers works!</p>
-<button class="btn btn-primary" [disabled]=!allowbutton>primary button</button>
+<div class="container">
+    <div class="row">
+     <div class="col-xs-12">
+      <label>tab the name of the server</label><br>
 
-<app-server></app-server><hr>
-<app-server></app-server>
+<!--<input class="form-control" type="text" (input)="onupdateservername($event)"><br>-->
+
+     <input class="form-control" type="text" [(ngModel)]="NameServer">
+
+    <!--<input class="form-control" type="text" [(ngModel)]="username">
+    {{username}}-->
+
+    <!--<button class="btn btn-primary" [disabled]=!username (click)="viderusername()">hello</button>-->
+
+      <button class="btn btn-primary" [disabled]=!allowbutton (click)="oncreateserver()">primary button</button>
+
+
+
+<!--<p>{{servercreatedstatus}}</p>-->
+
+      <p *ngIf="servercreated else noServer">server create succesfuly this is the name of the server {{NameServer}}</p>
+
+    <ng-template #noServer>
+       <p>no server created</p>
+    </ng-template>
+
+<br>
+ <app-server></app-server>
+ <br>
+ <app-server></app-server>
+</div>
+</div>
+
+</div>

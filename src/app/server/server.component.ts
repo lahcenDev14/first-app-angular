@@ -9,9 +9,19 @@ export class ServerComponent{
 
     serverid : number = 10;
     serverstatus : string = 'offline';
+
+    random = Math.random();
+
+    constructor()
+    {
+      this.serverstatus = this.random > 0.5 ? 'onligne' : 'offline';
+    }
   
-    getserverstatus() {
-      return this.serverstatus = 'offline';
+  
+    getColor() {
+
+      return this.serverstatus === 'onligne' ? 'green' : 'red';
+
     }
   
 
