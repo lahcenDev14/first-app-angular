@@ -15,6 +15,9 @@ export class ServersComponent implements OnInit{
   NameServer = '';
   username ='';
   servercreated = false;
+  servers = ['server test 1 ','server test 2'];
+
+
 
  constructor (){
 
@@ -34,6 +37,7 @@ export class ServersComponent implements OnInit{
  {
   
     this.servercreated = true;
+    this.servers.push(this.NameServer);
     this.servercreatedstatus = ' the name of the server'+this.NameServer;
  }
  
@@ -46,4 +50,5 @@ export class ServersComponent implements OnInit{
   this.username = "";
  }
 
+  
 }

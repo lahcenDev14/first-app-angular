@@ -1,34 +1,37 @@
 <div class="container">
-    <div class="row">
+    <div class="card">
+     <div class="row">
      <div class="col-xs-12">
       <label>tab the name of the server</label><br>
 
-<!--<input class="form-control" type="text" (input)="onupdateservername($event)"><br>-->
+       <!--<input class="form-control" type="text" (input)="onupdateservername($event)"><br>-->
 
-     <input class="form-control" type="text" [(ngModel)]="NameServer">
+      <input class="form-control" type="text" [(ngModel)]="NameServer">
 
-    <!--<input class="form-control" type="text" [(ngModel)]="username">
-    {{username}}-->
+      <!--<input class="form-control" type="text" [(ngModel)]="username">
+      {{username}}-->
 
-    <!--<button class="btn btn-primary" [disabled]=!username (click)="viderusername()">hello</button>-->
+      <!--<button class="btn btn-primary" [disabled]=!username (click)="viderusername()">hello</button>-->
 
       <button class="btn btn-primary" [disabled]=!allowbutton (click)="oncreateserver()">primary button</button>
 
 
 
-<!--<p>{{servercreatedstatus}}</p>-->
+      <!--<p>{{servercreatedstatus}}</p>-->
 
       <p *ngIf="servercreated else noServer">server create succesfuly this is the name of the server {{NameServer}}</p>
 
-    <ng-template #noServer>
+      <ng-template #noServer>
        <p>no server created</p>
-    </ng-template>
+        </ng-template>
 
-<br>
- <app-server></app-server>
- <br>
- <app-server></app-server>
-</div>
-</div>
+         <br>
+       </div>
+     </div>
+    </div>
+
+
+
+   
 
 </div>

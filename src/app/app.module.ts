@@ -3,9 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
-import { AlertWarning } from './alert-warning/alert-warning.component';
-import { AlertSuccesComponent } from './alert-succes/alert-succes.component';
 import { FormsModule } from '@angular/forms';
+import { CockpitComponent } from './cockpit/cockpit.component';
+import { ServerElementComponent } from './server-element/server-element.component';
 
 @NgModule({
   declarations: [
@@ -13,8 +13,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     ServerComponent,
     ServersComponent,
-    AlertWarning,
-    AlertSuccesComponent
+    CockpitComponent,
+    ServerElementComponent
   ],
   imports: [
     BrowserModule,
